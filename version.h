@@ -1,0 +1,1 @@
+unsigned char version[128] = " Nadia OS (sylvy kernel 0.0.1), Operating System Project!";

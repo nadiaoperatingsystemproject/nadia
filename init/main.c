@@ -26,7 +26,7 @@ extern void clear(void);
 extern void init_vga_controller(int);
 extern void init_prompt(void);
 extern void init_timer(void);
-extern dev_t* initrdisk(void);
+extern void initrdisk(void);
 
 extern area_list_t* free_area;
 extern area_list_t* area_used;
@@ -57,7 +57,7 @@ int kmain(struct multiboot* _m){
 	init_mm_map();//paging enable
 	//init ramdisk
 	kprint("\n total size %i", mem.higher>>20);
-	current_dev_disk = initrdisk();
+	//current_dev_disk = initrdisk();
 	abort();
 	//install fs
 	
@@ -65,7 +65,7 @@ int kmain(struct multiboot* _m){
 	init_sheduler();
 	init_vga_controller(1);
 	init_fs();
-	//init_prompt();
+	init_prompt();
 	while(1);
 	return 0;
 }

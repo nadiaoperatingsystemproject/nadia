@@ -1,7 +1,7 @@
 #ifndef NOS_FILE_H
 #define NOS_FILE_H
 
-struct file
+struct s_file
 {
 	unsigned short mode;
 	unsigned int uid;

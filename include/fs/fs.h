@@ -48,8 +48,8 @@ typedef struct file file;
 typedef struct dev_s dev_t;
 void init_fs(void);
 void* read_super_block(dev_t* dev);
-int read(dev_t* dev, file *f, char* b, int size);
-int write(dev_t* dev, file *f, char* b, int size);
+int read(dev_t* dev, file *f, char* b);
+int write(dev_t* dev, file *f, char* b);
 char* read_node(dev_t *dev, unsigned int i_num);
 char* write_node(dev_t *dev, unsigned int i_num, const char* b);
 #endif
